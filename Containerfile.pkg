@@ -1,0 +1,47 @@
+ARG BASE_VERSION=15
+FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
+
+ARG FREEBSD_ARCH=amd64
+LABEL org.opencontainers.image.title="prowlarr" \
+      org.opencontainers.image.description="Prowlarr indexer management on FreeBSD" \
+      org.opencontainers.image.source="https://github.com/daemonless/prowlarr" \
+      org.opencontainers.image.url="https://prowlarr.com/" \
+      org.opencontainers.image.documentation="https://wiki.servarr.com/prowlarr" \
+      org.opencontainers.image.licenses="GPL-3.0-only" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.port="9696" \
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      org.freebsd.jail.allow.mlock="required"
+
+# Install Prowlarr from FreeBSD packages
+RUN pkg update && \
+    pkg install -y prowlarr && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
+
+# Override package_info to show container update instructions
+RUN PROWLARR_VERSION=$(pkg info prowlarr | sed -n 's/.*Version.*: *//p') && \
+    printf "UpdateMethod=docker\nBranch=master\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$PROWLARR_VERSION" > /usr/local/share/prowlarr/package_info && \
+    mkdir -p /app && echo "$PROWLARR_VERSION" > /app/version
+
+# Create config directory
+RUN mkdir -p /config && \
+    chown -R bsd:bsd /config
+
+# Copy service definition
+COPY root/ /
+
+# Use pkg-specific run script
+COPY root/etc/services.d/prowlarr/run.pkg /etc/services.d/prowlarr/run
+
+# Make scripts executable
+RUN chmod +x /etc/services.d/prowlarr/run /etc/cont-init.d/* 2>/dev/null || true
+
+# Set up s6 service link
+RUN mkdir -p /run/s6/services/prowlarr && \
+    ln -sf /etc/services.d/prowlarr/run /run/s6/services/prowlarr/run
+
+EXPOSE 9696
+VOLUME /config
+

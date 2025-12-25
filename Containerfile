@@ -3,7 +3,7 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="prowlarr"
-LABEL org.opencontainers.image.title="prowlarr" \
+LABEL org.opencontainers.image.title="Prowlarr" \
     org.opencontainers.image.description="Prowlarr indexer management on FreeBSD" \
     org.opencontainers.image.source="https://github.com/daemonless/prowlarr" \
     org.opencontainers.image.url="https://prowlarr.com/" \

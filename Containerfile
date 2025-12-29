@@ -16,7 +16,7 @@ LABEL org.opencontainers.image.title="Prowlarr" \
     org.freebsd.jail.allow.mlock="required" \
     io.daemonless.category="Media Management" \
     io.daemonless.upstream-mode="servarr" \
-    io.daemonless.upstream-url="https://prowlarr.servarr.com/v1/update/master/changes?os=bsd" \
+    io.daemonless.upstream-url="https://prowlarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore" \
     io.daemonless.packages="${PACKAGES}"
 
 ARG PROWLARR_BRANCH="master"

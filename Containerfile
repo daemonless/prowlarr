@@ -24,6 +24,8 @@ ARG PROWLARR_BRANCH="master"
 # Install Prowlarr from FreeBSD packages
 RUN pkg update && \
     pkg install -y ${PACKAGES} && \
+    pkg clean -ay && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/* && \
     mkdir -p /usr/local/share/prowlarr && \
     PROWLARR_VERSION=$(fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
     grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \

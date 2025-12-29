@@ -26,7 +26,7 @@ RUN pkg update && \
     pkg install -y ${PACKAGES} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/* && \
-    mkdir -p /usr/local/share/prowlarr && \
+    mkdir -p /usr/local/share/prowlarr /config && \
     PROWLARR_VERSION=$(fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
     grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \
     fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
@@ -35,10 +35,7 @@ RUN pkg update && \
     chmod +x /usr/local/share/prowlarr/Prowlarr && \
     chmod -R o+rX /usr/local/share/prowlarr && \
     printf "UpdateMethod=docker\nBranch=${PROWLARR_BRANCH}\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$PROWLARR_VERSION" > /usr/local/share/prowlarr/package_info && \
-    mkdir -p /app && echo "$PROWLARR_VERSION" > /app/version
-
-# Create config directory
-RUN mkdir -p /config && \
+    mkdir -p /app && echo "$PROWLARR_VERSION" > /app/version && \
     chown -R bsd:bsd /usr/local/share/prowlarr /config
 
 # Copy service definition and init scripts

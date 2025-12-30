@@ -2,6 +2,7 @@ ARG BASE_VERSION=15
 FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
+ARG PKG_NAME=prowlarr
 LABEL org.opencontainers.image.title="Prowlarr" \
       org.opencontainers.image.description="Prowlarr indexer management on FreeBSD" \
       org.opencontainers.image.source="https://github.com/daemonless/prowlarr" \
@@ -12,16 +13,17 @@ LABEL org.opencontainers.image.title="Prowlarr" \
       org.opencontainers.image.authors="daemonless" \
       io.daemonless.port="9696" \
       io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.pkg-name="${PKG_NAME}" \
       org.freebsd.jail.allow.mlock="required"
 
-# Install Prowlarr from FreeBSD packages
+# Install from FreeBSD packages
 RUN pkg update && \
-    pkg install -y prowlarr && \
+    pkg install -y ${PKG_NAME} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 # Override package_info to show container update instructions
-RUN PROWLARR_VERSION=$(pkg info prowlarr | sed -n 's/.*Version.*: *//p') && \
+RUN PROWLARR_VERSION=$(pkg info ${PKG_NAME} | sed -n 's/.*Version.*: *//p') && \
     printf "UpdateMethod=docker\nBranch=master\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$PROWLARR_VERSION" > /usr/local/share/prowlarr/package_info && \
     mkdir -p /app && echo "$PROWLARR_VERSION" > /app/version
 

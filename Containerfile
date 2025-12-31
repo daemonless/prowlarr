@@ -5,7 +5,7 @@ ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="prowlarr"
 ARG PROWLARR_BRANCH="master"
 ARG UPSTREAM_URL="https://prowlarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
-ARG UPSTREAM_SED="s/.*\"version\":\"\\([^\"]*\\)\".*/\\1/p"
+ARG UPSTREAM_SED="grep -o '\"version\":\"[^\"]*\"' | head -1 | cut -d'\"' -f4"
 
 LABEL org.opencontainers.image.title="Prowlarr" \
     org.opencontainers.image.description="Prowlarr indexer management on FreeBSD" \
@@ -30,7 +30,7 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/* && \
     mkdir -p /usr/local/share/prowlarr /config && \
     PROWLARR_VERSION=$(fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    sed -n "${UPSTREAM_SED}" | head -1) && \
+    grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
     fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
     tar xzf - -C /usr/local/share/prowlarr --strip-components=1 && \
     rm -rf /usr/local/share/prowlarr/Prowlarr.Update && \

@@ -3,6 +3,10 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="prowlarr"
+ARG PROWLARR_BRANCH="master"
+ARG UPSTREAM_URL="https://prowlarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
+ARG UPSTREAM_SED="s/.*\"version\":\"\\([^\"]*\\)\".*/\\1/p"
+
 LABEL org.opencontainers.image.title="Prowlarr" \
     org.opencontainers.image.description="Prowlarr indexer management on FreeBSD" \
     org.opencontainers.image.source="https://github.com/daemonless/prowlarr" \
@@ -15,11 +19,9 @@ LABEL org.opencontainers.image.title="Prowlarr" \
     io.daemonless.arch="${FREEBSD_ARCH}" \
     org.freebsd.jail.allow.mlock="required" \
     io.daemonless.category="Media Management" \
-    io.daemonless.upstream-mode="servarr" \
-    io.daemonless.upstream-url="https://prowlarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore" \
+    io.daemonless.upstream-url="${UPSTREAM_URL}" \
+    io.daemonless.upstream-sed="${UPSTREAM_SED}" \
     io.daemonless.packages="${PACKAGES}"
-
-ARG PROWLARR_BRANCH="master"
 
 # Install Prowlarr from FreeBSD packages
 RUN pkg update && \
@@ -28,7 +30,7 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/* && \
     mkdir -p /usr/local/share/prowlarr /config && \
     PROWLARR_VERSION=$(fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    grep -o '"version":"[^"]*"' | head -n 1 | cut -d '"' -f 4) && \
+    sed -n "${UPSTREAM_SED}" | head -1) && \
     fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
     tar xzf - -C /usr/local/share/prowlarr --strip-components=1 && \
     rm -rf /usr/local/share/prowlarr/Prowlarr.Update && \

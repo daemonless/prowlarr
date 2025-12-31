@@ -5,7 +5,7 @@ ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="prowlarr"
 ARG PROWLARR_BRANCH="master"
 ARG UPSTREAM_URL="https://prowlarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
-ARG UPSTREAM_SED="grep -o '\"version\":\"[^\"]*\"' | head -1 | cut -d'\"' -f4"
+ARG UPSTREAM_JQ=".[0].version"
 
 LABEL org.opencontainers.image.title="Prowlarr" \
     org.opencontainers.image.description="Prowlarr indexer management on FreeBSD" \
@@ -20,7 +20,7 @@ LABEL org.opencontainers.image.title="Prowlarr" \
     org.freebsd.jail.allow.mlock="required" \
     io.daemonless.category="Media Management" \
     io.daemonless.upstream-url="${UPSTREAM_URL}" \
-    io.daemonless.upstream-sed="${UPSTREAM_SED}" \
+    io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
     io.daemonless.packages="${PACKAGES}"
 
 # Install Prowlarr from FreeBSD packages

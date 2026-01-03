@@ -4,7 +4,8 @@ FROM ghcr.io/daemonless/arr-base:${BASE_VERSION}
 ARG FREEBSD_ARCH=amd64
 ARG PACKAGES="prowlarr"
 ARG PROWLARR_BRANCH="master"
-ARG UPSTREAM_URL="https://prowlarr.servarr.com/v1/update/master/changes?os=bsd&runtime=netcore"
+ARG UPSTREAM_URL="https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/changes?os=bsd&runtime=netcore"
+ARG DOWNLOAD_URL="https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore"
 ARG UPSTREAM_JQ=".[0].version"
 ARG HEALTHCHECK_ENDPOINT="http://localhost:9696/ping"
 
@@ -32,17 +33,8 @@ RUN pkg update && \
     pkg install -y ${PACKAGES} && \
     pkg clean -ay && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/* && \
-    mkdir -p /usr/local/share/prowlarr /config && \
-    PROWLARR_VERSION=$(fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/changes?os=bsd&runtime=netcore" | \
-    grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
-    fetch -qo - "https://prowlarr.servarr.com/v1/update/${PROWLARR_BRANCH}/updatefile?os=bsd&arch=x64&runtime=netcore" | \
-    tar xzf - -C /usr/local/share/prowlarr --strip-components=1 && \
-    rm -rf /usr/local/share/prowlarr/Prowlarr.Update && \
-    chmod +x /usr/local/share/prowlarr/Prowlarr && \
-    chmod -R o+rX /usr/local/share/prowlarr && \
-    printf "UpdateMethod=docker\nBranch=${PROWLARR_BRANCH}\nPackageVersion=%s\nPackageAuthor=[daemonless](https://github.com/daemonless/daemonless)\n" "$PROWLARR_VERSION" > /usr/local/share/prowlarr/package_info && \
-    mkdir -p /app && echo "$PROWLARR_VERSION" > /app/version && \
-    chown -R bsd:bsd /usr/local/share/prowlarr /config
+    PROWLARR_VERSION=$(fetch -qo - "${UPSTREAM_URL}" | grep -o '"version":"[^"]*"' | head -1 | cut -d'"' -f4) && \
+    install-arr.sh "prowlarr" "Prowlarr" "$PROWLARR_VERSION" "${DOWNLOAD_URL}" "${PROWLARR_BRANCH}"
 
 # Copy service definition and init scripts
 COPY root/ /

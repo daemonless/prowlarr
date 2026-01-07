@@ -1,0 +1,4 @@
+icon: ':material-magnet:'
+cit:
+  mode: port
+  port: 9696

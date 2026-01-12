@@ -1,0 +1,42 @@
+name: prowlarr
+
+x-daemonless:
+  title: "Prowlarr"
+  icon: ":material-magnet:"
+  category: "Media Management"
+  description: "Prowlarr indexer management on FreeBSD."
+  upstream_url: "https://github.com/Prowlarr/Prowlarr"
+  web_url: "https://prowlarr.com/"
+  freshports_url: "https://www.freshports.org/net-p2p/prowlarr/"
+  user: "bsd"
+  mlock: true
+  
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+    volumes:
+      /config: "Configuration directory"
+    ports:
+      9696: "Web UI"
+
+services:
+  prowlarr:
+    image: ghcr.io/daemonless/prowlarr:latest
+    container_name: prowlarr
+    restart: unless-stopped
+    
+    annotations:
+      org.freebsd.jail.allow.mlock: "true"
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/config:/config
+
+    ports:
+      - 9696:9696

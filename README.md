@@ -11,6 +11,7 @@ Prowlarr indexer management on FreeBSD.
 |---|---|
 | **Port** | 9696 |
 | **Registry** | `ghcr.io/daemonless/prowlarr` |
+| **Docs** | [daemonless.io/images/prowlarr](https://daemonless.io/images/prowlarr/) |
 | **Source** | [https://github.com/Prowlarr/Prowlarr](https://github.com/Prowlarr/Prowlarr) |
 | **Website** | [https://prowlarr.com/](https://prowlarr.com/) |
 

@@ -12,7 +12,7 @@ ARG PKG_NAME=prowlarr
 
 # --- Metadata (Injected by Generator) ---
 LABEL org.opencontainers.image.title="Prowlarr" \
-      org.opencontainers.image.description="Prowlarr indexer management on FreeBSD." \
+      org.opencontainers.image.description="Indexer manager and proxy for Sonarr, Radarr, and other *arr applications — centralizes indexer configuration across your media stack." \
       org.opencontainers.image.source="https://github.com/daemonless/prowlarr" \
       org.opencontainers.image.url="https://prowlarr.com/" \
       org.opencontainers.image.documentation="https://wiki.servarr.com/prowlarr" \

@@ -4,13 +4,14 @@ x-daemonless:
   title: "Prowlarr"
   icon: ":material-magnet:"
   category: "Media Management"
-  description: "Prowlarr indexer management on FreeBSD."
+  description: "Indexer manager and proxy for Sonarr, Radarr, and other *arr applications — centralizes indexer configuration across your media stack."
   upstream_url: "https://github.com/Prowlarr/Prowlarr"
   web_url: "https://prowlarr.com/"
   freshports_url: "https://www.freshports.org/net-p2p/prowlarr/"
   user: "bsd"
   mlock: true
-  
+  appjail: true
+
   docs:
     env:
       PUID: "User ID for the application process"

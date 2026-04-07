@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-04T20:12:54Z",
+  "generated": "2026-04-07T15:01:22Z",
   "image": "prowlarr",
   "tags": {
     "latest": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-04-04T20:11:03Z",
+      "generated": "2026-04-07T14:59:26Z",
       "packages": {
         "dotnet": [
           {
@@ -333,6 +333,10 @@
             "version": "8.6.4"
           },
           {
+            "name": "Prowlarr",
+            "version": "1.0.0"
+          },
+          {
             "name": "Prowlarr.Api.V1",
             "version": "1.0.0"
           },
@@ -345,7 +349,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Host",
+            "name": "Prowlarr.Http",
             "version": "1.0.0"
           },
           {
@@ -473,10 +477,6 @@
             "version": "2.0.2"
           },
           {
-            "name": "System.Data.SQLite.Core.Servarr",
-            "version": "1.0.115.5-18"
-          },
-          {
             "name": "System.Diagnostics.DiagnosticSource",
             "version": "6.0.1"
           },
@@ -547,10 +547,6 @@
           {
             "name": "System.Text.Encoding.CodePages",
             "version": "8.0.0"
-          },
-          {
-            "name": "System.Text.Encodings.Web",
-            "version": "4.7.2"
           },
           {
             "name": "System.Text.Json",
@@ -796,11 +792,11 @@
           },
           {
             "name": "pkg",
-            "version": "2.5.1"
+            "version": "2.6.2_1"
           },
           {
             "name": "prowlarr",
-            "version": "2.0.5.5160_1"
+            "version": "2.3.0.5236"
           },
           {
             "name": "readline",
@@ -833,7 +829,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 146,
+        "dotnet": 145,
         "freebsd": 57,
         "go": 0,
         "java": 0,
@@ -842,13 +838,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 203
+        "total": 202
       }
     },
     "pkg": {
-      "app_version": "2.0.5.5160_1",
+      "app_version": "2.3.0.5236",
       "arch": "amd64",
-      "generated": "2026-04-04T20:11:29Z",
+      "generated": "2026-04-07T14:56:52Z",
       "packages": {
         "dotnet": [
           {
@@ -861,15 +857,15 @@
           },
           {
             "name": "Azure.Core",
-            "version": "1.38.0"
+            "version": "1.47.1"
           },
           {
             "name": "Azure.Identity",
-            "version": "1.11.4"
+            "version": "1.14.2"
           },
           {
             "name": "BouncyCastle.Cryptography",
-            "version": "2.5.1"
+            "version": "2.6.1"
           },
           {
             "name": "Dapper",
@@ -905,7 +901,7 @@
           },
           {
             "name": "MailKit",
-            "version": "4.12.1"
+            "version": "4.14.0"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
@@ -921,7 +917,7 @@
           },
           {
             "name": "Microsoft.Bcl.AsyncInterfaces",
-            "version": "1.1.1"
+            "version": "8.0.0"
           },
           {
             "name": "Microsoft.Bcl.Cryptography",
@@ -929,7 +925,7 @@
           },
           {
             "name": "Microsoft.Data.SqlClient",
-            "version": "6.0.2"
+            "version": "6.1.1"
           },
           {
             "name": "Microsoft.Extensions.Caching.Abstractions",
@@ -1017,7 +1013,7 @@
           },
           {
             "name": "Microsoft.Extensions.Logging.Abstractions",
-            "version": "8.0.2"
+            "version": "8.0.3"
           },
           {
             "name": "Microsoft.Extensions.Logging.Configuration",
@@ -1053,35 +1049,35 @@
           },
           {
             "name": "Microsoft.Identity.Client",
-            "version": "4.61.3"
+            "version": "4.73.1"
           },
           {
             "name": "Microsoft.Identity.Client.Extensions.Msal",
-            "version": "4.61.3"
+            "version": "4.73.1"
           },
           {
             "name": "Microsoft.IdentityModel.Abstractions",
-            "version": "7.5.0"
+            "version": "7.7.1"
           },
           {
             "name": "Microsoft.IdentityModel.JsonWebTokens",
-            "version": "7.5.0"
+            "version": "7.7.1"
           },
           {
             "name": "Microsoft.IdentityModel.Logging",
-            "version": "7.5.0"
+            "version": "7.7.1"
           },
           {
             "name": "Microsoft.IdentityModel.Protocols",
-            "version": "7.5.0"
+            "version": "7.7.1"
           },
           {
             "name": "Microsoft.IdentityModel.Protocols.OpenIdConnect",
-            "version": "7.5.0"
+            "version": "7.7.1"
           },
           {
             "name": "Microsoft.IdentityModel.Tokens",
-            "version": "7.5.0"
+            "version": "7.7.1"
           },
           {
             "name": "Microsoft.Net.Http.Headers",
@@ -1097,11 +1093,11 @@
           },
           {
             "name": "Microsoft.Win32.SystemEvents",
-            "version": "4.7.0"
+            "version": "8.0.0"
           },
           {
             "name": "MimeKit",
-            "version": "4.12.0"
+            "version": "4.14.0"
           },
           {
             "name": "Mono.Nat",
@@ -1133,7 +1129,7 @@
           },
           {
             "name": "Newtonsoft.Json",
-            "version": "13.0.3"
+            "version": "13.0.4"
           },
           {
             "name": "Npgsql",
@@ -1141,7 +1137,7 @@
           },
           {
             "name": "Polly",
-            "version": "8.6.0"
+            "version": "8.6.4"
           },
           {
             "name": "Polly.Contrib.WaitAndRetry",
@@ -1149,7 +1145,7 @@
           },
           {
             "name": "Polly.Core",
-            "version": "8.6.0"
+            "version": "8.6.4"
           },
           {
             "name": "Prowlarr.Common",
@@ -1157,10 +1153,6 @@
           },
           {
             "name": "Prowlarr.Core",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Prowlarr.Http",
             "version": "1.0.0"
           },
           {
@@ -1265,7 +1257,7 @@
           },
           {
             "name": "System.ClientModel",
-            "version": "1.0.0"
+            "version": "1.5.1"
           },
           {
             "name": "System.ComponentModel",
@@ -1276,8 +1268,8 @@
             "version": "8.0.1"
           },
           {
-            "name": "System.Data.SQLite.Core.Servarr",
-            "version": "1.0.115.5-18"
+            "name": "System.Data.SQLite",
+            "version": "2.0.2"
           },
           {
             "name": "System.Diagnostics.DiagnosticSource",
@@ -1289,7 +1281,7 @@
           },
           {
             "name": "System.Drawing.Common",
-            "version": "4.7.0"
+            "version": "8.0.19"
           },
           {
             "name": "System.Formats.Asn1",
@@ -1305,11 +1297,11 @@
           },
           {
             "name": "System.IdentityModel.Tokens.Jwt",
-            "version": "7.5.0"
+            "version": "7.7.1"
           },
           {
             "name": "System.Memory.Data",
-            "version": "1.0.2"
+            "version": "8.0.1"
           },
           {
             "name": "System.Runtime.CompilerServices.Unsafe",
@@ -1352,12 +1344,8 @@
             "version": "8.0.0"
           },
           {
-            "name": "System.Text.Encodings.Web",
-            "version": "4.7.2"
-          },
-          {
             "name": "System.Text.Json",
-            "version": "8.0.5"
+            "version": "8.0.6"
           },
           {
             "name": "System.Windows.Extensions",
@@ -1599,11 +1587,11 @@
           },
           {
             "name": "pkg",
-            "version": "2.5.1"
+            "version": "2.6.2_1"
           },
           {
             "name": "prowlarr",
-            "version": "2.0.5.5160_1"
+            "version": "2.3.0.5236"
           },
           {
             "name": "readline",
@@ -1636,7 +1624,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 136,
+        "dotnet": 134,
         "freebsd": 57,
         "go": 0,
         "java": 0,
@@ -1645,13 +1633,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 193
+        "total": 191
       }
     },
     "pkg-latest": {
       "app_version": "2.3.0.5236",
       "arch": "amd64",
-      "generated": "2026-04-04T20:11:41Z",
+      "generated": "2026-04-07T14:48:15Z",
       "packages": {
         "dotnet": [
           {
@@ -1964,10 +1952,6 @@
           },
           {
             "name": "Prowlarr.Http",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Prowlarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -2439,7 +2423,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 136,
+        "dotnet": 135,
         "freebsd": 57,
         "go": 0,
         "java": 0,
@@ -2448,7 +2432,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 193
+        "total": 192
       }
     }
   }

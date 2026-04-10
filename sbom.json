@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-07T15:01:22Z",
+  "generated": "2026-04-10T20:45:37Z",
   "image": "prowlarr",
   "tags": {
     "latest": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-04-07T14:59:26Z",
+      "generated": "2026-04-10T20:44:17Z",
       "packages": {
         "dotnet": [
           {
@@ -331,10 +331,6 @@
           {
             "name": "Polly.Core",
             "version": "8.6.4"
-          },
-          {
-            "name": "Prowlarr",
-            "version": "1.0.0"
           },
           {
             "name": "Prowlarr.Api.V1",
@@ -829,7 +825,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 145,
+        "dotnet": 144,
         "freebsd": 57,
         "go": 0,
         "java": 0,
@@ -838,13 +834,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 202
+        "total": 201
       }
     },
     "pkg": {
       "app_version": "2.3.0.5236",
       "arch": "amd64",
-      "generated": "2026-04-07T14:56:52Z",
+      "generated": "2026-04-10T20:33:49Z",
       "packages": {
         "dotnet": [
           {
@@ -1153,6 +1149,10 @@
           },
           {
             "name": "Prowlarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Prowlarr.Host",
             "version": "1.0.0"
           },
           {
@@ -1624,7 +1624,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 134,
+        "dotnet": 135,
         "freebsd": 57,
         "go": 0,
         "java": 0,
@@ -1633,13 +1633,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 191
+        "total": 192
       }
     },
     "pkg-latest": {
-      "app_version": "2.3.0.5236",
+      "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-04-07T14:48:15Z",
+      "generated": "2026-04-10T20:33:29Z",
       "packages": {
         "dotnet": [
           {
@@ -1681,6 +1681,30 @@
           {
             "name": "Dynamitey",
             "version": "3.0.3"
+          },
+          {
+            "name": "FluentMigrator",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Abstractions",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Extensions.Postgres",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Runner.Core",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Runner.Postgres",
+            "version": "6.2.0"
+          },
+          {
+            "name": "FluentMigrator.Runner.SQLite",
+            "version": "6.2.0"
           },
           {
             "name": "FluentValidation",
@@ -1951,7 +1975,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Http",
+            "name": "Prowlarr.Host",
             "version": "1.0.0"
           },
           {
@@ -1965,82 +1989,6 @@
           {
             "name": "Sentry",
             "version": "4.0.2"
-          },
-          {
-            "name": "Servarr.FluentMigrator",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Abstractions",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Extensions.Oracle",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Extensions.Postgres",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Extensions.SqlAnywhere",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Extensions.SqlServer",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.Core",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.Db2",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.Firebird",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.Hana",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.MySql",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.Oracle",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.Postgres",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.Redshift",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.SQLite",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.SqlAnywhere",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.SqlServer",
-            "version": "3.3.2.9"
-          },
-          {
-            "name": "Servarr.FluentMigrator.Runner.SqlServerCe",
-            "version": "3.3.2.9"
           },
           {
             "name": "SharpZipLib",
@@ -2061,6 +2009,10 @@
           {
             "name": "System.ComponentModel",
             "version": "4.3.0"
+          },
+          {
+            "name": "System.ComponentModel.Annotations",
+            "version": "5.0.0"
           },
           {
             "name": "System.Configuration.ConfigurationManager",
@@ -2123,10 +2075,6 @@
             "version": "8.0.0"
           },
           {
-            "name": "System.Security.Permissions",
-            "version": "4.7.0"
-          },
-          {
             "name": "System.Security.Principal.Windows",
             "version": "5.0.0"
           },
@@ -2145,10 +2093,6 @@
           {
             "name": "System.Text.Json",
             "version": "8.0.6"
-          },
-          {
-            "name": "System.Windows.Extensions",
-            "version": "4.7.0"
           },
           {
             "name": "YamlDotNet",
@@ -2390,7 +2334,7 @@
           },
           {
             "name": "prowlarr",
-            "version": "2.3.0.5236"
+            "version": "2.3.5.5327"
           },
           {
             "name": "readline",
@@ -2423,7 +2367,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 135,
+        "dotnet": 121,
         "freebsd": 57,
         "go": 0,
         "java": 0,
@@ -2432,7 +2376,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 192
+        "total": 178
       }
     }
   }

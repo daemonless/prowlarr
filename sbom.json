@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-07T13:03:16Z",
+  "generated": "2026-05-18T12:46:30Z",
   "image": "prowlarr",
   "tags": {
     "latest": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-05-07T13:01:26Z",
+      "generated": "2026-05-18T12:45:12Z",
       "packages": {
         "dotnet": [
           {
@@ -345,15 +345,15 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Host",
-            "version": "1.0.0"
-          },
-          {
             "name": "Prowlarr.Http",
             "version": "1.0.0"
           },
           {
             "name": "Prowlarr.Mono",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Prowlarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -836,7 +836,7 @@
     "pkg": {
       "app_version": "2.3.0.5236",
       "arch": "amd64",
-      "generated": "2026-05-07T13:01:57Z",
+      "generated": "2026-05-18T12:44:38Z",
       "packages": {
         "dotnet": [
           {
@@ -1635,7 +1635,7 @@
     "pkg-latest": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-05-07T13:01:45Z",
+      "generated": "2026-05-18T12:44:34Z",
       "packages": {
         "dotnet": [
           {
@@ -1963,11 +1963,23 @@
             "version": "8.6.4"
           },
           {
+            "name": "Prowlarr.Api.V1",
+            "version": "1.0.0"
+          },
+          {
             "name": "Prowlarr.Common",
             "version": "1.0.0"
           },
           {
+            "name": "Prowlarr.Core",
+            "version": "1.0.0"
+          },
+          {
             "name": "Prowlarr.Http",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Prowlarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -2355,7 +2367,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 120,
+        "dotnet": 123,
         "freebsd": 56,
         "go": 0,
         "java": 0,
@@ -2364,7 +2376,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 176
+        "total": 179
       }
     }
   }

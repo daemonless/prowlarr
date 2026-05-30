@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-18T12:46:30Z",
+  "generated": "2026-05-30T10:11:39Z",
   "image": "prowlarr",
   "tags": {
     "latest": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-05-18T12:45:12Z",
+      "generated": "2026-05-30T10:10:19Z",
       "packages": {
         "dotnet": [
           {
@@ -333,6 +333,10 @@
             "version": "8.6.4"
           },
           {
+            "name": "Prowlarr",
+            "version": "1.0.0"
+          },
+          {
             "name": "Prowlarr.Api.V1",
             "version": "1.0.0"
           },
@@ -345,11 +349,11 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Http",
+            "name": "Prowlarr.Host",
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Mono",
+            "name": "Prowlarr.Http",
             "version": "1.0.0"
           },
           {
@@ -728,7 +732,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.124"
           },
           {
             "name": "compat13x-amd64",
@@ -821,7 +825,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 144,
+        "dotnet": 145,
         "freebsd": 56,
         "go": 0,
         "java": 0,
@@ -830,13 +834,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 200
+        "total": 201
       }
     },
     "pkg": {
       "app_version": "2.3.0.5236",
       "arch": "amd64",
-      "generated": "2026-05-18T12:44:38Z",
+      "generated": "2026-05-30T10:10:02Z",
       "packages": {
         "dotnet": [
           {
@@ -1140,10 +1144,6 @@
             "version": "8.6.4"
           },
           {
-            "name": "Prowlarr.Api.V1",
-            "version": "1.0.0"
-          },
-          {
             "name": "Prowlarr.Common",
             "version": "1.0.0"
           },
@@ -1152,7 +1152,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Http",
+            "name": "Prowlarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -1527,7 +1527,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.124"
           },
           {
             "name": "compat13x-amd64",
@@ -1620,7 +1620,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 136,
+        "dotnet": 135,
         "freebsd": 56,
         "go": 0,
         "java": 0,
@@ -1629,13 +1629,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 192
+        "total": 191
       }
     },
     "pkg-latest": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-05-18T12:44:34Z",
+      "generated": "2026-05-30T10:10:21Z",
       "packages": {
         "dotnet": [
           {
@@ -1979,14 +1979,6 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Mono",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Prowlarr.SignalR",
-            "version": "1.0.0"
-          },
-          {
             "name": "ReusableTasks",
             "version": "2.0.0"
           },
@@ -2274,7 +2266,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.117_2"
+            "version": "3.124"
           },
           {
             "name": "compat13x-amd64",
@@ -2290,7 +2282,7 @@
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "icu",
@@ -2367,7 +2359,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 121,
         "freebsd": 56,
         "go": 0,
         "java": 0,
@@ -2376,7 +2368,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 179
+        "total": 177
       }
     }
   }

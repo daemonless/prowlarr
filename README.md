@@ -7,9 +7,9 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/prowlarr/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/prowlarr/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/prowlarr?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/prowlarr/commits)
+[![mlock Required](https://img.shields.io/badge/mlock-required-orange?style=flat-square&logo=freebsd&logoColor=white)](https://daemonless.io/guides/ocijail-patch/)
 
 Indexer manager and proxy for Sonarr, Radarr, and other *arr applications — centralizes indexer configuration across your media stack.
-
 
 | | |
 |---|---|
@@ -37,16 +37,16 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 ```yaml
 services:
   prowlarr:
-    image: ghcr.io/daemonless/prowlarr:latest
+    image: "ghcr.io/daemonless/prowlarr:latest"
     container_name: prowlarr
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
+      - PUID=1000  # User ID for the application process
+      - PGID=1000  # Group ID for the application process
+      - TZ=UTC  # Timezone for the container
     volumes:
       - "/path/to/containers/prowlarr:/config"
     ports:
-      - 9696:9696
+      - "9696:9696"
     annotations:
       org.freebsd.jail.allow.mlock: "true"
     restart: unless-stopped
@@ -116,7 +116,7 @@ podman run -d --name prowlarr \
 - name: Deploy prowlarr
   containers.podman.podman_container:
     name: prowlarr
-    image: ghcr.io/daemonless/prowlarr:latest
+    image: "ghcr.io/daemonless/prowlarr:latest"
     state: started
     restart_policy: always
     env:

@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-21T12:55:38Z",
+  "generated": "2026-07-04T21:49:38Z",
   "image": "prowlarr",
   "tags": {
     "latest": {
       "app_version": "2.4.0.5397",
       "arch": "amd64",
-      "generated": "2026-06-21T12:52:51Z",
+      "generated": "2026-07-04T21:48:03Z",
       "packages": {
         "dotnet": [
           {
@@ -345,10 +345,6 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Host",
-            "version": "1.0.0"
-          },
-          {
             "name": "Prowlarr.Http",
             "version": "1.0.0"
           },
@@ -608,11 +604,11 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -700,11 +696,11 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -716,7 +712,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -724,7 +720,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -833,7 +829,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 145,
+        "dotnet": 144,
         "freebsd": 58,
         "go": 0,
         "java": 0,
@@ -842,13 +838,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 203
+        "total": 202
       }
     },
     "pkg": {
       "app_version": "2.3.0.5236",
       "arch": "amd64",
-      "generated": "2026-06-21T12:52:35Z",
+      "generated": "2026-07-04T21:48:28Z",
       "packages": {
         "dotnet": [
           {
@@ -1160,11 +1156,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.Core",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Prowlarr.Mono",
+            "name": "Prowlarr.Http",
             "version": "1.0.0"
           },
           {
@@ -1415,11 +1407,11 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -1507,11 +1499,11 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1523,7 +1515,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -1531,7 +1523,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -1640,7 +1632,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 136,
+        "dotnet": 135,
         "freebsd": 58,
         "go": 0,
         "java": 0,
@@ -1649,13 +1641,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 194
+        "total": 193
       }
     },
     "pkg-latest": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-06-21T12:54:25Z",
+      "generated": "2026-07-04T21:45:48Z",
       "packages": {
         "dotnet": [
           {
@@ -1987,6 +1979,10 @@
             "version": "1.0.0"
           },
           {
+            "name": "Prowlarr.Api.V1",
+            "version": "1.0.0"
+          },
+          {
             "name": "Prowlarr.Common",
             "version": "1.0.0"
           },
@@ -2162,11 +2158,11 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.0"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.0"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -2250,11 +2246,11 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-runtime-lib32",
-            "version": "15.0p7"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -2266,7 +2262,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -2274,7 +2270,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-zlib",
@@ -2314,7 +2310,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "krb5",
@@ -2379,7 +2375,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 121,
+        "dotnet": 122,
         "freebsd": 56,
         "go": 0,
         "java": 0,
@@ -2388,7 +2384,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 177
+        "total": 178
       }
     }
   }

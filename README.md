@@ -19,15 +19,14 @@ Indexer manager and proxy for Sonarr, Radarr, and other *arr applications — ce
 | **Website** | [https://prowlarr.com/](https://prowlarr.com/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
+| `nightly` | **Nightly branch** — bleeding-edge pre-release build. One-way DB migrations; back up /config before switching back to release. | Alternative build. |
 | `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Production stability. |
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
@@ -53,10 +52,11 @@ services:
 ```
 
 ### AppJail Director
-
 **.env**:
 
 ```
+# .env
+
 DIRECTOR_PROJECT=prowlarr
 PUID=1000
 PGID=1000
@@ -66,6 +66,8 @@ TZ=UTC
 **appjail-director.yml**:
 
 ```yaml
+# appjail-director.yml
+
 options:
   - virtualnet: ':<random> default'
   - nat:
@@ -74,7 +76,7 @@ services:
     name: prowlarr
     options:
       - container: 'boot args:--pull'
-      - expose="9696:9696 proto:tcp" \
+      - expose: '9696:9696 proto:tcp' \
     oci:
       user: root
       environment:
@@ -91,6 +93,8 @@ volumes:
 **Makejail**:
 
 ```
+# Makejail
+
 ARG tag=latest
 
 OPTION overwrite=force

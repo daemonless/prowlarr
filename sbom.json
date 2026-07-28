@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-22T15:36:11Z",
+  "generated": "2026-07-28T23:41:50Z",
   "image": "prowlarr",
   "tags": {
     "develop": {
-      "app_version": "2.5.2.5491",
+      "app_version": "2.6.0.5494",
       "arch": "amd64",
-      "generated": "2026-07-22T15:33:53Z",
+      "generated": "2026-07-28T23:37:40Z",
       "packages": {
         "dotnet": [
           {
@@ -341,7 +341,7 @@
             "version": "8.7.0"
           },
           {
-            "name": "Prowlarr.Api.V1",
+            "name": "Prowlarr",
             "version": "1.0.0"
           },
           {
@@ -354,10 +354,6 @@
           },
           {
             "name": "Prowlarr.Host",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Prowlarr.Http",
             "version": "1.0.0"
           },
           {
@@ -761,7 +757,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 126,
+        "dotnet": 125,
         "freebsd": 59,
         "go": 0,
         "java": 0,
@@ -770,13 +766,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 185
+        "total": 184
       }
     },
     "latest": {
       "app_version": "2.5.2.5491",
       "arch": "amd64",
-      "generated": "2026-07-22T15:34:12Z",
+      "generated": "2026-07-28T23:38:24Z",
       "packages": {
         "dotnet": [
           {
@@ -1110,10 +1106,6 @@
           {
             "name": "Polly.Core",
             "version": "8.7.0"
-          },
-          {
-            "name": "Prowlarr.Api.V1",
-            "version": "1.0.0"
           },
           {
             "name": "Prowlarr.Common",
@@ -1532,7 +1524,7 @@
       },
       "source": "upstream",
       "summary": {
-        "dotnet": 126,
+        "dotnet": 125,
         "freebsd": 59,
         "go": 0,
         "java": 0,
@@ -1541,13 +1533,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 185
+        "total": 184
       }
     },
     "nightly": {
-      "app_version": "2.6.0.5494",
+      "app_version": "2.6.1.5496",
       "arch": "amd64",
-      "generated": "2026-07-22T15:34:22Z",
+      "generated": "2026-07-28T23:40:10Z",
       "packages": {
         "dotnet": [
           {
@@ -1899,7 +1891,7 @@
             "version": "1.0.0"
           },
           {
-            "name": "Prowlarr.SignalR",
+            "name": "Prowlarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -2310,7 +2302,7 @@
     "pkg": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-07-22T15:34:32Z",
+      "generated": "2026-07-28T23:38:19Z",
       "packages": {
         "dotnet": [
           {
@@ -2643,18 +2635,6 @@
           },
           {
             "name": "Prowlarr.Common",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Prowlarr.Core",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Prowlarr.Http",
-            "version": "1.0.0"
-          },
-          {
-            "name": "Prowlarr.Mono",
             "version": "1.0.0"
           },
           {
@@ -3054,7 +3034,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 123,
+        "dotnet": 120,
         "freebsd": 59,
         "go": 0,
         "java": 0,
@@ -3063,13 +3043,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 182
+        "total": 179
       }
     },
     "pkg-latest": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-07-22T15:35:01Z",
+      "generated": "2026-07-28T23:40:34Z",
       "packages": {
         "dotnet": [
           {
@@ -3406,6 +3386,18 @@
           },
           {
             "name": "Prowlarr.Core",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Prowlarr.Host",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Prowlarr.Http",
+            "version": "1.0.0"
+          },
+          {
+            "name": "Prowlarr.SignalR",
             "version": "1.0.0"
           },
           {
@@ -3760,7 +3752,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.8.0_1"
+            "version": "2.8.1_1"
           },
           {
             "name": "prowlarr",
@@ -3793,7 +3785,7 @@
       },
       "source": "pkg",
       "summary": {
-        "dotnet": 120,
+        "dotnet": 123,
         "freebsd": 57,
         "go": 0,
         "java": 0,
@@ -3802,7 +3794,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 177
+        "total": 180
       }
     }
   }

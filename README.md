@@ -11,9 +11,6 @@ Source: dbuild templates
 
 Indexer manager and proxy for Sonarr, Radarr, and other *arr applications — centralizes indexer configuration across your media stack.
 
-> [!WARNING]
-> **Requires ocijail ≥ 0.6.0 (annotation support).** This image needs the jail permission **allow.mlock**, applied via OCI annotations. FreeBSD **quarterly ships ocijail 0.4.0, which has no annotation support** — the container starts but the permission is silently dropped, so the app can crash or misbehave at runtime. Point your pkg repos at the `latest` branch (ocijail ≥ 0.6.0), then run with the annotation flag below. See the [ocijail guide](https://daemonless.io/guides/ocijail-patch/).
-
 | | |
 |---|---|
 | **Port** | 9696 |
@@ -52,8 +49,11 @@ services:
       - "9696:9696"
     annotations:
       org.freebsd.jail.allow.mlock: "true"
-    restart: unless-stopped
+    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
+    restart: always
 ```
+
+Save as `compose.yaml`, then run `podman-compose up -d`.
 
 ### AppJail Director
 **.env**:
@@ -105,6 +105,9 @@ OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/prowlarr:${tag}
 SET allow.mlock=1
 ```
+
+Save the files above, then run `appjail-director up`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
@@ -119,6 +122,8 @@ podman run -d --name prowlarr \
   -v /path/to/containers/prowlarr:/config \
   ghcr.io/daemonless/prowlarr:latest
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
@@ -135,7 +140,38 @@ appjail oci run -Pd \
   -o fstab="/path/to/containers/prowlarr /config <pseudofs>" \
   ghcr.io/daemonless/prowlarr:latest prowlarr
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+### Bastille
+
+> [!WARNING]
+> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+
+```yaml
+services:
+  prowlarr:
+    image: "ghcr.io/daemonless/prowlarr:latest"
+    container_name: prowlarr
+    network_mode: host  # jail shares host networking
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+```
+
+Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+
+```bash
+bastille create -O \
+  --env PUID=1000 \
+  --env PGID=1000 \
+  --env TZ=UTC \
+  --data-path /path/to/containers/prowlarr \
+  prowlarr ghcr.io/daemonless/prowlarr:latest inherit
+```
 
 ### Ansible
 
@@ -157,6 +193,8 @@ appjail oci run -Pd \
     annotation:
       org.freebsd.jail.allow.mlock: "true"
 ```
+
+Save as `prowlarr-deploy.yaml`, then run `ansible-playbook prowlarr-deploy.yaml`.
 
 Access at: `http://localhost:9696`
 

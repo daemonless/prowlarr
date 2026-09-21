@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/prowlarr/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/prowlarr/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/prowlarr?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/prowlarr/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/prowlarr?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/prowlarr)
 [![mlock Required](https://img.shields.io/badge/mlock-required-orange?style=flat-square&logo=freebsd&logoColor=white)](https://daemonless.io/guides/ocijail-patch/)
 
 Indexer manager and proxy for Sonarr, Radarr, and other *arr applications — centralizes indexer configuration across your media stack.

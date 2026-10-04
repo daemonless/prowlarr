@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-27T22:07:09Z",
+  "generated": "2026-10-04T19:34:58Z",
   "image": "prowlarr",
   "tags": {
     "develop": {
       "app_version": "2.6.5.5623",
       "arch": "amd64",
-      "generated": "2026-09-27T22:06:07Z",
+      "generated": "2026-10-04T19:34:29Z",
       "packages": {
         "dotnet": [
           {
@@ -1099,7 +1099,7 @@
     "latest": {
       "app_version": "2.6.5.5623",
       "arch": "amd64",
-      "generated": "2026-09-27T22:06:24Z",
+      "generated": "2026-10-04T19:33:06Z",
       "packages": {
         "dotnet": [
           {
@@ -2191,9 +2191,9 @@
       }
     },
     "nightly": {
-      "app_version": "2.6.5.5620",
+      "app_version": "2.6.5.5649",
       "arch": "amd64",
-      "generated": "2026-09-27T22:06:30Z",
+      "generated": "2026-10-04T19:33:17Z",
       "packages": {
         "dotnet": [
           {
@@ -3287,7 +3287,7 @@
     "pkg": {
       "app_version": "2.3.5.5327",
       "arch": "amd64",
-      "generated": "2026-09-27T22:06:14Z",
+      "generated": "2026-10-04T19:33:24Z",
       "packages": {
         "dotnet": [
           {
@@ -4381,7 +4381,7 @@
     "pkg-latest": {
       "app_version": "2.6.5.5623",
       "arch": "amd64",
-      "generated": "2026-09-27T22:05:28Z",
+      "generated": "2026-10-04T19:34:13Z",
       "packages": {
         "dotnet": [
           {

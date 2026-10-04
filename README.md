@@ -45,7 +45,7 @@ services:
       - PGID=1000  # Group ID for the application process
       - TZ=UTC  # Timezone for the container
     volumes:
-      - "/path/to/containers/prowlarr:/config"
+      - "/containers/prowlarr:/config"
     ports:
       - "9696:9696"
     annotations:
@@ -93,7 +93,7 @@ services:
       - prowlarr: /config
 volumes:
   prowlarr:
-    device: '/path/to/containers/prowlarr'
+    device: '/containers/prowlarr'
 ```
 
 **Makejail**:
@@ -128,58 +128,6 @@ Save the files above, then run `appjail-director up`.
 >
 > To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
-### Podman CLI
-
-```bash
-podman run -d --name prowlarr \
-  -p 9696:9696 \
-  --annotation 'org.freebsd.jail.allow.mlock=true' \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -v /path/to/containers/prowlarr:/config \
-  ghcr.io/daemonless/prowlarr:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### AppJail
-
-
-```bash
-appjail oci run -Pd \
-  -o overwrite=force \
-  -o container="args:--pull" \
-  -o virtualnet=":<random> default" \
-  -o nat \
-  -o template=template.conf \
-  -o expose="9696:9696 proto:tcp" \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -o fstab="/path/to/containers/prowlarr /config <pseudofs>" \
-  ghcr.io/daemonless/prowlarr:latest prowlarr
-```
-
-**template.conf**:
-```
-# template.conf
-
-exec.start: "/bin/sh /etc/rc"
-exec.stop: "/bin/sh /etc/rc.shutdown jail"
-mount.devfs
-persist
-allow.mlock
-```
-
-Save the files above, then run `sh run.sh`.
-
-
-> [!WARNING]
-> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
->
-> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
-
 ### Bastille
 
 > [!WARNING]
@@ -197,42 +145,10 @@ services:
       - PGID=1000
       - TZ=UTC
     volumes:
-      - "/path/to/containers/prowlarr:/config"
+      - "/containers/prowlarr:/config"
 ```
 
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  --env PUID=1000 \
-  --env PGID=1000 \
-  --env TZ=UTC \
-  --volume /path/to/containers/prowlarr /config \
-  prowlarr ghcr.io/daemonless/prowlarr:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy prowlarr
-  containers.podman.podman_container:
-    name: prowlarr
-    image: "ghcr.io/daemonless/prowlarr:latest"
-    state: started
-    restart_policy: always
-    env:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: "UTC"
-    ports:
-      - "9696:9696"
-    volumes:
-      - "/path/to/containers/prowlarr:/config"
-    annotation:
-      org.freebsd.jail.allow.mlock: "true"
-```
-
-Save as `prowlarr-deploy.yaml`, then run `ansible-playbook prowlarr-deploy.yaml`.
+Save as `bastille-compose.yml`, then run `bastille up`.
 
 Access at: `http://localhost:9696`
 

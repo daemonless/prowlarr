@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-20T22:20:33Z",
+  "generated": "2026-10-22T23:01:36Z",
   "image": "prowlarr",
   "tags": {
     "develop": {
       "app_version": "2.6.5.5623",
       "arch": "amd64",
-      "generated": "2026-10-20T22:16:34Z",
+      "generated": "2026-10-22T23:00:29Z",
       "packages": {
         "dotnet": [
           {
@@ -828,13 +828,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "GPLv3+",
               "LGPL21+"
             ],
@@ -934,20 +927,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
               "PD"
             ],
             "name": "sqlite3",
@@ -965,7 +944,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 103,
-        "freebsd": 61,
+        "freebsd": 58,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -973,13 +952,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 164
+        "total": 161
       }
     },
     "latest": {
       "app_version": "2.6.5.5623",
       "arch": "amd64",
-      "generated": "2026-10-20T22:16:40Z",
+      "generated": "2026-10-22T23:00:06Z",
       "packages": {
         "dotnet": [
           {
@@ -1802,13 +1781,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "GPLv3+",
               "LGPL21+"
             ],
@@ -1908,20 +1880,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
               "PD"
             ],
             "name": "sqlite3",
@@ -1939,7 +1897,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 103,
-        "freebsd": 61,
+        "freebsd": 58,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1947,13 +1905,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 164
+        "total": 161
       }
     },
     "nightly": {
       "app_version": "2.6.5.5672",
       "arch": "amd64",
-      "generated": "2026-10-20T22:16:59Z",
+      "generated": "2026-10-22T22:59:32Z",
       "packages": {
         "dotnet": [
           {
@@ -2776,13 +2734,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "GPLv3+",
               "LGPL21+"
             ],
@@ -2879,20 +2830,6 @@
             ],
             "name": "readline",
             "version": "8.3.6"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -2913,7 +2850,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 103,
-        "freebsd": 61,
+        "freebsd": 58,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -2921,13 +2858,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 164
+        "total": 161
       }
     },
     "pkg": {
       "app_version": "2.6.5.5623",
       "arch": "amd64",
-      "generated": "2026-10-20T22:16:51Z",
+      "generated": "2026-10-22T22:59:32Z",
       "packages": {
         "dotnet": [
           {
@@ -3750,13 +3687,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "GPLv3+",
               "LGPL21+"
             ],
@@ -3856,20 +3786,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
               "PD"
             ],
             "name": "sqlite3",
@@ -3887,7 +3803,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 103,
-        "freebsd": 61,
+        "freebsd": 58,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -3895,13 +3811,13 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 164
+        "total": 161
       }
     },
     "pkg-latest": {
       "app_version": "2.6.5.5623",
       "arch": "amd64",
-      "generated": "2026-10-20T22:17:40Z",
+      "generated": "2026-10-22T23:00:56Z",
       "packages": {
         "dotnet": [
           {
@@ -4724,13 +4640,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
-          },
-          {
-            "licenses": [
               "GPLv3+",
               "LGPL21+"
             ],
@@ -4830,20 +4739,6 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
-          },
-          {
-            "licenses": [
               "PD"
             ],
             "name": "sqlite3",
@@ -4861,7 +4756,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 103,
-        "freebsd": 61,
+        "freebsd": 58,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -4869,7 +4764,7 @@
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 164
+        "total": 161
       }
     }
   }

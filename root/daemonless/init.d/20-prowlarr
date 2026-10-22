@@ -9,7 +9,10 @@ echo "[prowlarr] Setting up prowlarr user with PUID=$PUID PGID=$PGID"
 # Modify prowlarr user/group to match requested UID/GID
 pw groupmod prowlarr -g "$PGID" 2>/dev/null || true
 
-# Ensure config directory has correct ownership
-chown -R bsd:bsd /config
+# Ensure config directory has correct ownership (as non-root the
+# runtime owns /config)
+if [ "$(id -u)" = 0 ]; then
+    chown -R bsd:bsd /config
+fi
 
 echo "[prowlarr] Configuration complete"

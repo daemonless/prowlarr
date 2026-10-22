@@ -50,9 +50,10 @@ RUN pkg update && \
 
 # Copy service definition and init scripts
 COPY root/ /
+RUN rm /daemonless/libexec/prowlarr.pkg && \
+    chmod +x /daemonless/init.d/20-prowlarr /daemonless/libexec/prowlarr
 
-# Make scripts executable
-RUN chmod +x /etc/services.d/prowlarr/run /etc/cont-init.d/* 2>/dev/null || true
+CMD ["/daemonless/libexec/prowlarr"]
 
 # --- Expose (Injected by Generator) ---
 {%- if ports %}

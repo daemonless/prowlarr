@@ -44,15 +44,11 @@ RUN mkdir -p /config && \
 # Copy service definition
 COPY root/ /
 
-# Use pkg-specific run script
-COPY root/etc/services.d/prowlarr/run.pkg /etc/services.d/prowlarr/run
+# The pkg layout's launcher
+RUN mv /daemonless/libexec/prowlarr.pkg /daemonless/libexec/prowlarr && \
+    chmod +x /daemonless/init.d/20-prowlarr /daemonless/libexec/prowlarr
 
-# Make scripts executable
-RUN chmod +x /etc/services.d/prowlarr/run /etc/cont-init.d/* 2>/dev/null || true
-
-# Set up s6 service link
-RUN mkdir -p /run/s6/services/prowlarr && \
-    ln -sf /etc/services.d/prowlarr/run /run/s6/services/prowlarr/run
+CMD ["/daemonless/libexec/prowlarr"]
 
 # --- Expose (Injected by Generator) ---
 EXPOSE 9696

@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-03T20:57:30Z",
+  "generated": "2026-11-04T17:03:55Z",
   "image": "prowlarr",
   "tags": {
     "develop": {
       "app_version": "3.0.0.5737",
       "arch": "amd64",
-      "generated": "2026-11-03T20:48:15Z",
+      "generated": "2026-11-04T17:02:49Z",
       "packages": {
         "dotnet": [
           {
@@ -935,7 +935,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           }
         ],
         "go": [],
@@ -963,7 +963,7 @@
     "latest": {
       "app_version": "2.7.0.5723",
       "arch": "amd64",
-      "generated": "2026-11-03T20:48:53Z",
+      "generated": "2026-11-04T17:02:44Z",
       "packages": {
         "dotnet": [
           {
@@ -1888,7 +1888,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           }
         ],
         "go": [],
@@ -1916,7 +1916,7 @@
     "nightly": {
       "app_version": "3.0.1.5738",
       "arch": "amd64",
-      "generated": "2026-11-03T20:48:47Z",
+      "generated": "2026-11-04T17:03:14Z",
       "packages": {
         "dotnet": [
           {
@@ -2846,7 +2846,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           }
         ],
         "go": [],
@@ -2874,7 +2874,7 @@
     "pkg": {
       "app_version": "2.7.0.5723",
       "arch": "amd64",
-      "generated": "2026-11-03T20:55:33Z",
+      "generated": "2026-11-04T17:02:49Z",
       "packages": {
         "dotnet": [
           {
@@ -3799,7 +3799,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           }
         ],
         "go": [],
@@ -3827,7 +3827,7 @@
     "pkg-latest": {
       "app_version": "2.7.0.5723",
       "arch": "amd64",
-      "generated": "2026-11-03T20:48:40Z",
+      "generated": "2026-11-04T17:02:24Z",
       "packages": {
         "dotnet": [
           {
@@ -4752,7 +4752,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           }
         ],
         "go": [],

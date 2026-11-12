@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T17:03:55Z",
+  "generated": "2026-11-12T23:17:59Z",
   "image": "prowlarr",
   "tags": {
     "develop": {
-      "app_version": "3.0.0.5737",
+      "app_version": "3.0.1.5752",
       "arch": "amd64",
-      "generated": "2026-11-04T17:02:49Z",
+      "generated": "2026-11-12T23:17:15Z",
       "packages": {
         "dotnet": [
           {
@@ -963,7 +963,7 @@
     "latest": {
       "app_version": "2.7.0.5723",
       "arch": "amd64",
-      "generated": "2026-11-04T17:02:44Z",
+      "generated": "2026-11-12T23:17:03Z",
       "packages": {
         "dotnet": [
           {
@@ -1914,20 +1914,20 @@
       }
     },
     "nightly": {
-      "app_version": "3.0.1.5738",
+      "app_version": "3.0.2.5761",
       "arch": "amd64",
-      "generated": "2026-11-04T17:03:14Z",
+      "generated": "2026-11-12T23:17:18Z",
       "packages": {
         "dotnet": [
           {
             "name": "AngleSharp",
             "purl": "",
-            "version": "1.9.0"
+            "version": "1.10.1"
           },
           {
             "name": "AngleSharp.Xml",
             "purl": "",
-            "version": "1.2.0"
+            "version": "1.3.0"
           },
           {
             "name": "BouncyCastle.Cryptography",
@@ -2012,172 +2012,172 @@
           {
             "name": "Microsoft.AspNetCore.App.Runtime.freebsd-x64",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.Internal",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.AspNetCore.Cryptography.KeyDerivation",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.AspNetCore.WebUtilities",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.Abstractions",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.Binder",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.CommandLine",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.EnvironmentVariables",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.FileExtensions",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.Json",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Configuration.UserSecrets",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.DependencyInjection",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Diagnostics",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Diagnostics.Abstractions",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.FileProviders.Abstractions",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.FileProviders.Physical",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.FileSystemGlobbing",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Hosting",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Hosting.Abstractions",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Hosting.WindowsServices",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.Abstractions",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.Configuration",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.Console",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.Debug",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.EventLog",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Logging.EventSource",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Options",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Options.ConfigurationExtensions",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Extensions.Primitives",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.freebsd-x64",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.Net.Http.Headers",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "Microsoft.OpenApi",
@@ -2247,7 +2247,7 @@
           {
             "name": "Polly",
             "purl": "",
-            "version": "8.9.0"
+            "version": "8.9.1"
           },
           {
             "name": "Polly.Contrib.WaitAndRetry",
@@ -2257,7 +2257,7 @@
           {
             "name": "Polly.Core",
             "purl": "",
-            "version": "8.9.0"
+            "version": "8.9.1"
           },
           {
             "name": "Prowlarr",
@@ -2342,7 +2342,7 @@
           {
             "name": "System.Diagnostics.EventLog",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "System.Drawing.Common",
@@ -2377,7 +2377,7 @@
           {
             "name": "System.Security.Cryptography.Pkcs",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "System.Security.Principal.Windows",
@@ -2387,7 +2387,7 @@
           {
             "name": "System.ServiceProcess.ServiceController",
             "purl": "",
-            "version": "10.0.14"
+            "version": "10.0.15"
           },
           {
             "name": "System.Text.Encoding.CodePages",
@@ -2874,7 +2874,7 @@
     "pkg": {
       "app_version": "2.7.0.5723",
       "arch": "amd64",
-      "generated": "2026-11-04T17:02:49Z",
+      "generated": "2026-11-12T22:57:11Z",
       "packages": {
         "dotnet": [
           {
@@ -3827,7 +3827,7 @@
     "pkg-latest": {
       "app_version": "2.7.0.5723",
       "arch": "amd64",
-      "generated": "2026-11-04T17:02:24Z",
+      "generated": "2026-11-12T22:57:07Z",
       "packages": {
         "dotnet": [
           {
@@ -4731,7 +4731,7 @@
               "BSD2CLAUSE"
             ],
             "name": "pkg",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
